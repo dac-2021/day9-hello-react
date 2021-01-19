@@ -1,19 +1,29 @@
 import "./App.css";
+import { useState } from "react";
 
 function App() {
   return (
     <div>
-      <Page1 title="Delhi" id="1" />
-      <Page1 title="Kolkata" id="2" />
-      <Page1 title="Mumbai" id="3" />
+      <Page1 />
     </div>
   );
 }
 
-function Page1(props) {
+function Page1() {
+  const [counter, setCounter] = useState(0);
+
   return (
-    <div>
-      Hello World {props.id} {props.title}
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        height: "100vh",
+      }}
+    >
+      <h1>{counter}</h1>
+      <button onClick={(e) => setCounter(counter + 1)}>Counter</button>
     </div>
   );
 }
