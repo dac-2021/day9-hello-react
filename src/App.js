@@ -7,6 +7,8 @@ import "./App.css";
 function App() {
   return (
     <div>
+      <Page3 />
+
       <Page1 />
 
       <Page2 />
@@ -46,13 +48,45 @@ function Page2() {
         return <h3 key={index}>{item} </h3>;
       })}
 
-      <h2>Page 2 List Option 2 :: Arrrow Function in One LIne</h2>
+      <h2>
+        Page 2 List Option 2 :: Arrrow Function in One LIne ::: POPULAR
+      </h2>
       {list.map((item, index) => (
         <h3 key={index}>{item}</h3>
       ))}
 
       <h2>Option 3:: We have extracted the logic at top level </h2>
       {list1}
+    </div>
+  );
+}
+
+function Page3() {
+  const num = 100;
+  const str = "Hello World";
+
+  const jsx1 = <div>I am JSX</div>;
+  const jsx2 = (
+    <div>
+      <div>I am also JSX</div>
+    </div>
+  );
+
+  const f1 = () => 10;
+  const f2 = () => "I am string";
+  const f3 = () => <div>I am JSX in fucntion</div>;
+  const f4 = () => (
+    <div>
+      <div>I am mulitline jsx</div>
+    </div>
+  );
+
+  return (
+    <div>
+      <h1>Page 3</h1>
+      <div>{num}</div>
+      <div>{str}</div>
+      <div>{jsx1}</div>
     </div>
   );
 }
