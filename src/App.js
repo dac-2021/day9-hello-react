@@ -3,8 +3,12 @@ import { useState } from "react";
 
 function App() {
   return (
-    <div>
-      <Page1 />
+    <div className="container-fluid">
+      <div className="row">
+        <div className="d-none d-md-block col-md-3 bg-primary">A</div>
+        <div className="col-md-6 bg-info">B</div>
+        <div className="d-none d-md-block col-md-3 bg-dark">C</div>
+      </div>
     </div>
   );
 }
