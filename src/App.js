@@ -1,4 +1,5 @@
 import "./App.css";
+import Home from "./Home";
 
 /**
  * Custom Tag
@@ -11,10 +12,6 @@ function App() {
       <Home />
     </div>
   );
-}
-
-function Home() {
-  return <div>Home Component</div>;
 }
 
 export default App;
